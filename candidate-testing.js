@@ -29,20 +29,22 @@ function askQuestion() {
   }
 }
 
-function gradeQuiz(candidateAnswer) {
+function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
-  
+let grade = 0;  
  for (let i = 0; i < candidateAnswers.length; i++){
-  console.log(`You answered ${candidateAnswers[i]}, the correct answer is ${correctAnswers[i]}!`)
- }
+   //TODO 3.2 use this variable to calculate the candidates score.
+   console.log(`You answered ${candidateAnswers[i]}, the correct answer is ${correctAnswers[i]}!`)
+  if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()){
+    grade = grade + 1;
+  } else grade = grade;
+} 
+let score = (grade/5)*100;
+console.log(`You got ${grade} questions correct for a score of ${score}%.`)
+return grade;
 
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
-
-  return grade;
 }
-
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
