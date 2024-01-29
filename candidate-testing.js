@@ -49,7 +49,8 @@ if (score >= 80) {
   console.log("Sorry, you have failed.")
 }
 return grade;
-
+//Thanks
+  
 }
 function runProgram() {
   askForName();
